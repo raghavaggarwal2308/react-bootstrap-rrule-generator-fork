@@ -48,7 +48,7 @@ export default {
     tooltip: 'Datetime picker for start on date',
   },
   repeat: {
-    label: 'Repeat',
+    label: 'Repeat:',
     yearly: {
       label: 'Yearly',
       on: 'on',
