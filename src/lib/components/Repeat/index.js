@@ -6,6 +6,7 @@ import RepeatWeekly from './Weekly/index';
 import RepeatDaily from './Daily/index';
 import RepeatHourly from './Hourly/index';
 import translateLabel from '../../utils/translateLabel';
+import {MenuItem, SplitButton} from "react-bootstrap";
 
 const Repeat = ({
   id,
@@ -26,7 +27,7 @@ const Repeat = ({
 
   return (
     <div className="px-3">
-      <div className="form-group row">
+      <div className="form-group row repeat-frequency">
         <div className="col-sm-2 text-sm-right">
           <label
             htmlFor={`${id}-frequency`}
@@ -53,7 +54,7 @@ const Repeat = ({
           </select>
         </div>
       </div>
-
+      <div className={'repeat-configuration'}>
       {
         isOptionSelected('Yearly') &&
         <RepeatYearly
@@ -99,6 +100,7 @@ const Repeat = ({
           translations={translations}
         />
       }
+      </div>
 
     </div>
   );

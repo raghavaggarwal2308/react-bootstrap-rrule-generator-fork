@@ -40,13 +40,13 @@ const RepeatWeekly = ({
         </div>
       </div>
 
-      <div className="form-group row">
+      <div className="form-group row individual-day-of-week-selector">
         <div className="btn-group btn-group-toggle offset-sm-2">
           {daysArray.map(([dayName, isDayActive]) => (
             <label
               htmlFor={`${id}-${dayName}`}
               key={dayName}
-              className={`btn btn-primary ${isDayActive ? 'active' : ''}`}
+              className={`btn btn-primary day ${isDayActive ? 'active' : ''}`}
             >
               <input
                 type="checkbox"

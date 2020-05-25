@@ -16,7 +16,7 @@ const RepeatYearlyOnThe = ({
 
   return (
     <div className={`form-group row d-flex align-items-sm-center ${!isActive && 'opacity-50'}`}>
-      <div className="col-sm-1 offset-sm-2">
+      <div className="col-sm-1">
         {hasMoreModes && (
           <input
             id={id}
@@ -33,7 +33,7 @@ const RepeatYearlyOnThe = ({
         {translateLabel(translations, 'repeat.yearly.on_the')}
       </div>
 
-      <div className="col-sm-2">
+      <div className="col-sm-2 week-of-month-selector">
         <select
           id={`${id}-which`}
           name="repeat.yearly.onThe.which"
@@ -51,7 +51,7 @@ const RepeatYearlyOnThe = ({
         </select>
       </div>
 
-      <div className="col-sm-3">
+      <div className="col-sm-3 day-of-week-selector">
         <select
           id={`${id}-day`}
           name="repeat.yearly.onThe.day"
@@ -65,11 +65,11 @@ const RepeatYearlyOnThe = ({
         </select>
       </div>
 
-      <div className="col-sm-1">
+      <div className="col-xsm-1">
           {translateLabel(translations, 'repeat.yearly.of')}
       </div>
 
-      <div className="col-sm-2">
+      <div className="col-sm-2 month-selector">
         <select
           id={`${id}-month`}
           name="repeat.yearly.onThe.month"

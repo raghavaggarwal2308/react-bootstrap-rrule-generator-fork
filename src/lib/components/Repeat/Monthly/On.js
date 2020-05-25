@@ -15,7 +15,7 @@ const RepeatMonthlyOn = ({
 
   return (
     <div className={`form-group row d-flex align-items-sm-center ${!isActive && 'opacity-50'}`}>
-      <div className="col-sm-1 offset-sm-2">
+      <div className="col-sm-1">
         {hasMoreModes && (
           <input
             id={id}
@@ -28,11 +28,11 @@ const RepeatMonthlyOn = ({
           />
         )}
       </div>
-      <div className="col-sm-1">
+      <div className="col-sm-2">
         {translateLabel(translations, 'repeat.monthly.on_day')}
       </div>
 
-      <div className="col-sm-2">
+      <div className="col-sm-2 day-of-month-selector">
         <select
           id={`${id}-day`}
           name="repeat.monthly.on.day"
