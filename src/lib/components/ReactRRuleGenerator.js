@@ -11,6 +11,7 @@ import configureInitialState from '../utils/configureInitialState';
 import translateLabel from '../utils/translateLabel';
 import translations from '../translations';
 import '../styles/index.css';
+import {ControlLabel, Form, FormGroup, MenuItem, SplitButton} from "react-bootstrap";
 
 class ReactRRuleGenerator extends PureComponent {
   // compute default view based on user's config
@@ -64,6 +65,27 @@ class ReactRRuleGenerator extends PureComponent {
 
     return (
       <div>
+
+
+        <Form>
+          <FormGroup>
+            <ControlLabel>
+              {'Standup Report Format:'}
+            </ControlLabel>
+            <SplitButton
+                bsStyle={'primary'}
+                title={'Test'}
+                id={`split-button-basic`}
+            >
+              <MenuItem eventKey="1">Action</MenuItem>
+              <MenuItem eventKey="2">Another action</MenuItem>
+              <MenuItem eventKey="3">Something else here</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey="4">Separated link</MenuItem>
+            </SplitButton>
+          </FormGroup>
+
+        </Form>
 
         {
           !options.hideError && error && (
