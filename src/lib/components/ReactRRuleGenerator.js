@@ -11,9 +11,9 @@ import configureInitialState from '../utils/configureInitialState';
 import translateLabel from '../utils/translateLabel';
 import translations from '../translations';
 import '../styles/index.css';
-import {ControlLabel, Form, FormGroup, MenuItem, SplitButton} from "react-bootstrap";
+import {ControlLabel, DropdownButton, Form, FormGroup, MenuItem, SplitButton} from "react-bootstrap";
 
-class ReactRRuleGenerator extends PureComponent {
+class ReactRRuleGenerator extends React.Component {
   // compute default view based on user's config
   state = configureInitialState(
     this.props.config,
@@ -22,6 +22,7 @@ class ReactRRuleGenerator extends PureComponent {
   );
 
   componentWillMount() {
+    console.log("unmounting");
     if (this.props.onChange === ReactRRuleGenerator.defaultProps.onChange) {
       // no onChange() was provided
       throw new Error('No onChange() function has been passed to RRuleGenerator. \n' +
@@ -72,17 +73,20 @@ class ReactRRuleGenerator extends PureComponent {
             <ControlLabel>
               {'Standup Report Format:'}
             </ControlLabel>
-            <SplitButton
+            <DropdownButton
                 bsStyle={'primary'}
-                title={'Test'}
-                id={`split-button-basic`}
+                title={'Title'}
+                key={1}
+                id={`dropdown-basic`}
             >
               <MenuItem eventKey="1">Action</MenuItem>
               <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
+              <MenuItem eventKey="3" active>
+                Active Item
+              </MenuItem>
               <MenuItem divider />
               <MenuItem eventKey="4">Separated link</MenuItem>
-            </SplitButton>
+            </DropdownButton>
           </FormGroup>
 
         </Form>
