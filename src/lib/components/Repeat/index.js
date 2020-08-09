@@ -36,9 +36,9 @@ const Repeat = ({
                   <DropdownButton
                       bsStyle={'primary'}
                       title={translateLabel(translations, 'repeat.label')}
-                      key={1}
+                      key={frequency}
                       id={`dropdown-basic`}
-                      onSelect={eventKey => handleChange(eventKey)}
+                      onSelect={eventKey => handleChange({name: 'repeat.frequency', value: eventKey})}
                   >
                     {isOptionAvailable('Yearly') &&
                     <MenuItem eventKey="Yearly">{translateLabel(translations, 'repeat.yearly.label')}</MenuItem>}
