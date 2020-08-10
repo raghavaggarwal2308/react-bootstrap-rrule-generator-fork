@@ -6,7 +6,7 @@ import RepeatWeekly from './Weekly/index';
 import RepeatDaily from './Daily/index';
 import RepeatHourly from './Hourly/index';
 import translateLabel from '../../utils/translateLabel';
-import SplitButton, {ControlLabel, DropdownButton, Form, FormGroup, MenuItem} from "react-bootstrap";
+import {ControlLabel, DropdownButton, Form, FormGroup, MenuItem, SplitButton} from "react-bootstrap";
 
 const Repeat = ({
                     id,
