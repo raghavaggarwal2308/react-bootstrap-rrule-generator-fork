@@ -38,7 +38,7 @@ const Repeat = ({
                       title={translateLabel(translations, 'repeat.label')}
                       key={frequency}
                       id={`dropdown-basic`}
-                      onSelect={eventKey => this.handleChange({name: 'repeat.frequency', value: eventKey})}
+                      onSelect={eventKey => handleChange({name: 'repeat.frequency', value: eventKey})}
                       name={'repeat.frequency'}
                   >
                     {isOptionAvailable('Yearly') &&
