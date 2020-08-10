@@ -35,7 +35,7 @@ const Repeat = ({
                   </ControlLabel>
                   <SplitButton
                       bsStyle={'primary'}
-                      title={translateLabel(translations, 'repeat.label')}
+                      title={frequency}
                       key={frequency}
                       id={`dropdown-basic`}
                       onSelect={eventKey => handleChange({target: {name: 'repeat.frequency', value: eventKey}})}
