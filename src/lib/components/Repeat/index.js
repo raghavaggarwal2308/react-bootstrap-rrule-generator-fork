@@ -27,8 +27,7 @@ const Repeat = ({
 
     return (
         <div className="px-3">
-            <div className="form-group row repeat-frequency">
-                <FormGroup>
+            <div className="form-group repeat-frequency">
                     <ControlLabel>
                         {translateLabel(translations, 'repeat.label')}
                     </ControlLabel>
@@ -51,7 +50,6 @@ const Repeat = ({
                         {isOptionAvailable('Hourly') &&
                         <MenuItem eventKey="Hourly">{translateLabel(translations, 'repeat.hourly.label')}</MenuItem>}
                     </SplitButton>
-                </FormGroup>
 
 
                 {/*<div className="col-sm-2 text-sm-right">*/}
