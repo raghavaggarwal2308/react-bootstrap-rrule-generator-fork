@@ -21,7 +21,8 @@ const Repeat = ({
                     },
                     handleChange,
                     translations
-                }) => {
+                },
+                repeatDropdownStyle) => {
     const isOptionAvailable = option => !options.frequency || options.frequency.indexOf(option) !== -1;
     const isOptionSelected = option => frequency === option;
 
@@ -38,7 +39,7 @@ const Repeat = ({
                         id={`dropdown-basic`}
                         onSelect={eventKey => handleChange({target: {name: 'repeat.frequency', value: eventKey}})}
                         name={'repeat.frequency'}
-                        style={this.props.repeatDropdownStyle}
+                        style={repeatDropdownStyle}
                     >
                         {isOptionAvailable('Yearly') &&
                         <MenuItem eventKey="Yearly">{translateLabel(translations, 'repeat.yearly.label')}</MenuItem>}

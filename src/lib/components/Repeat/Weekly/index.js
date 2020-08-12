@@ -12,7 +12,8 @@ const RepeatWeekly = ({
     options,
   },
   handleChange,
-  translations
+  translations,
+  weeklyFrequencyInputStyle
 }) => {
   let daysArray = toPairs(days);
   if (options.weekStartsOnSunday) {
@@ -33,7 +34,7 @@ const RepeatWeekly = ({
             className="form-control"
             value={interval}
             onChange={numericalFieldHandler(handleChange)}
-            style={this.props.weeklyFrequencyInputStyle}
+            style={weeklyFrequencyInputStyle}
           />
         </div>
         <div className="col-sm-1">
