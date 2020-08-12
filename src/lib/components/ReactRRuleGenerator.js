@@ -95,6 +95,7 @@ class ReactRRuleGenerator extends React.Component {
                             repeat={repeat}
                             handleChange={this.handleChange}
                             translations={this.props.translations}
+                            repeatDropdownStyle={this.props.repeatDropdownStyle}
                         />
                     </div>
 
@@ -134,6 +135,9 @@ ReactRRuleGenerator.propTypes = {
     onChange: PropTypes.func,
     calendarComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
     translations: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+    repeatDropdownStyle: PropTypes.object,
+    weeklyFrequencyInputStyle: PropTypes.object,
+    monthlyFrequencyInputStyle: PropTypes.object,
 };
 ReactRRuleGenerator.defaultProps = {
     id: null,

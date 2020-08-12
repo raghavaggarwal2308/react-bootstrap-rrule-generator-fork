@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import numericalFieldHandler from '../../../utils/numericalFieldHandler';
 import translateLabel from '../../../utils/translateLabel';
+import {MenuItem, SplitButton} from "react-bootstrap";
 
 const RepeatMonthlyOn = ({
   id,
@@ -35,17 +36,30 @@ const RepeatMonthlyOn = ({
       </div>
 
       <div className="col-sm-2 day-of-month-selector">
-        <select
-          id={`${id}-day`}
-          name="repeat.monthly.on.day"
-          aria-label="Repeat monthly on a day"
-          className="form-control"
-          value={on.day}
-          disabled={!isActive}
-          onChange={numericalFieldHandler(handleChange)}
+        {/*<select*/}
+        {/*  id={`${id}-day`}*/}
+        {/*  name="repeat.monthly.on.day"*/}
+        {/*  aria-label="Repeat monthly on a day"*/}
+        {/*  className="form-control"*/}
+        {/*  value={on.day}*/}
+        {/*  disabled={!isActive}*/}
+        {/*  onChange={numericalFieldHandler(handleChange)}*/}
+        {/*>*/}
+        {/*  {[...new Array(31)].map((day, i) => <option key={i} value={i + 1}>{i + 1}</option>)}*/}
+        {/*</select>*/}
+
+        <SplitButton
+            id={`${id}-day`}
+            name="repeat.monthly.on.day"
+            aria-label="Repeat monthly on a day"
+            className="form-control"
+            key={on.day}
+            disabled={!isActive}
+            onSelect={eventKey => numericalFieldHandler(handleChange)({target: {name: 'repeat.monthly.on.day', value: eventKey}})}
         >
-          {[...new Array(31)].map((day, i) => <option key={i} value={i + 1}>{i + 1}</option>)}
-        </select>
+            {/*{[...new Array(31)].map((day, i) => <option key={i} value={i + 1}>{i + 1}</option>)}*/}
+            {[...new Array(31)].map((day, i) => <MenuItem eventKey={i+1}>{i + 1}</MenuItem>)}
+        </SplitButton>
       </div>
     </div>
   );

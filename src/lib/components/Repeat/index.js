@@ -38,6 +38,7 @@ const Repeat = ({
                         id={`dropdown-basic`}
                         onSelect={eventKey => handleChange({target: {name: 'repeat.frequency', value: eventKey}})}
                         name={'repeat.frequency'}
+                        style={this.props.repeatDropdownStyle}
                     >
                         {isOptionAvailable('Yearly') &&
                         <MenuItem eventKey="Yearly">{translateLabel(translations, 'repeat.yearly.label')}</MenuItem>}
@@ -100,6 +101,7 @@ const Repeat = ({
                         monthly={monthly}
                         handleChange={handleChange}
                         translations={translations}
+                        monthlyFrequencyInputStyle={this.props.monthlyFrequencyInputStyle}
                     />
                 }
                 {
@@ -109,6 +111,7 @@ const Repeat = ({
                         weekly={weekly}
                         handleChange={handleChange}
                         translations={translations}
+                        weeklyFrequencyInputStyle={this.props.weeklyFrequencyInputStyle}
                     />
                 }
                 {
@@ -152,6 +155,9 @@ Repeat.propTypes = {
     }).isRequired,
     handleChange: PropTypes.func.isRequired,
     translations: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
+    repeatDropdownStyle: PropTypes.object,
+    weeklyFrequencyInputStyle: PropTypes.object,
+    monthlyFrequencyInputStyle: PropTypes.object,
 };
 
 export default Repeat;

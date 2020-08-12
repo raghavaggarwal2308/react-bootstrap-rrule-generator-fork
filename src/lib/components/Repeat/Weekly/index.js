@@ -33,6 +33,7 @@ const RepeatWeekly = ({
             className="form-control"
             value={interval}
             onChange={numericalFieldHandler(handleChange)}
+            style={this.props.weeklyFrequencyInputStyle}
           />
         </div>
         <div className="col-sm-1">
@@ -95,6 +96,7 @@ RepeatWeekly.propTypes = {
   }).isRequired,
   handleChange: PropTypes.func.isRequired,
   translations: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
+  weeklyFrequencyInputStyle: PropTypes.object,
 };
 
 export default RepeatWeekly;
