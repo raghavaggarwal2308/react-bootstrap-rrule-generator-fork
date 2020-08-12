@@ -143,6 +143,9 @@ ReactRRuleGenerator.defaultProps = {
     },
     calendarComponent: null,
     translations: translations.english,
+    repeatDropdownStyle: {},
+    weeklyFrequencyInputStyle: {},
+    monthlyFrequencyInputStyle: {},
 };
 
 export default ReactRRuleGenerator;

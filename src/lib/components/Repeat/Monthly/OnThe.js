@@ -16,21 +16,23 @@ const RepeatMonthlyOnThe = ({
 
   return (
     <div className={`form-group row d-flex align-items-sm-center ${!isActive && 'opacity-50'}`}>
-      <div className="col-sm-1">
-        {hasMoreModes && (
-          <input
-            id={id}
-            type="radio"
-            name="repeat.monthly.mode"
-            aria-label="Repeat monthly on the"
-            value="on the"
-            checked={isActive}
-            onChange={handleChange}
-          />
-        )}
-      </div>
-      <div className="col-sm-2">
-        {translateLabel(translations, 'repeat.monthly.on_the')}
+      <div className={'combo-label'}>
+          <div className="col-sm-1">
+            {hasMoreModes && (
+              <input
+                id={id}
+                type="radio"
+                name="repeat.monthly.mode"
+                aria-label="Repeat monthly on the"
+                value="on the"
+                checked={isActive}
+                onChange={handleChange}
+              />
+            )}
+          </div>
+          <div className="col-sm-2">
+            {translateLabel(translations, 'repeat.monthly.on_the')}
+          </div>
       </div>
 
       <div className="col-sm-2 week-of-month-selector">
