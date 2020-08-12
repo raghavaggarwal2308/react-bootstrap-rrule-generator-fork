@@ -32,7 +32,7 @@ const Repeat = ({
                         {translateLabel(translations, 'repeat.label')}
                     </ControlLabel>
                     <SplitButton
-                        bsStyle={'primary'}
+                        bsStyle={'link'}
                         title={frequency}
                         key={frequency}
                         id={`dropdown-basic`}
