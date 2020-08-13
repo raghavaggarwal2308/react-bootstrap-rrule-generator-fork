@@ -28,6 +28,10 @@ const Repeat = ({
     const isOptionAvailable = option => !options.frequency || options.frequency.indexOf(option) !== -1;
     const isOptionSelected = option => frequency === option;
 
+    console.log("######################");
+    console.log(repeatDropdownStyle);
+    console.log("######################");
+
     return (
         <div className="px-3">
             <div className="form-group repeat-frequency">
