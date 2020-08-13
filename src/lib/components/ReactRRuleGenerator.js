@@ -102,6 +102,8 @@ class ReactRRuleGenerator extends React.Component {
                             repeatDropdownStyle={this.props.repeatDropdownStyle}
                             weeklyFrequencyInputStyle={this.props.weeklyFrequencyInputStyle}
                             monthlyFrequencyInputStyle={this.props.monthlyFrequencyInputStyle}
+                            monthlyOnDayDropdownStyle={this.props.monthlyOnDayDropdownStyle}
+                            monthlyOnTheDayDropdownStyle={this.props.monthlyOnTheDayDropdownStyle}
                         />
                     </div>
 
@@ -144,6 +146,8 @@ ReactRRuleGenerator.propTypes = {
     repeatDropdownStyle: PropTypes.object,
     weeklyFrequencyInputStyle: PropTypes.object,
     monthlyFrequencyInputStyle: PropTypes.object,
+    monthlyOnDayDropdownStyle: PropTypes.object,
+    monthlyOnTheDayDropdownStyle: PropTypes.object,
 };
 ReactRRuleGenerator.defaultProps = {
     id: null,
@@ -156,6 +160,8 @@ ReactRRuleGenerator.defaultProps = {
     repeatDropdownStyle: {},
     weeklyFrequencyInputStyle: {},
     monthlyFrequencyInputStyle: {},
+    monthlyOnDayDropdownStyle: {},
+    monthlyOnTheDayDropdownStyle: {},
 };
 
 export default ReactRRuleGenerator;

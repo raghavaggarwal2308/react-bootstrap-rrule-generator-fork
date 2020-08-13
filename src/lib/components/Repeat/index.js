@@ -24,6 +24,8 @@ const Repeat = ({
                     repeatDropdownStyle,
                     monthlyFrequencyInputStyle,
                     weeklyFrequencyInputStyle,
+                    monthlyOnDayDropdownStyle,
+                    monthlyOnTheDayDropdownStyle
                 }) => {
     const isOptionAvailable = option => !options.frequency || options.frequency.indexOf(option) !== -1;
     const isOptionSelected = option => frequency === option;
@@ -105,6 +107,8 @@ const Repeat = ({
                         handleChange={handleChange}
                         translations={translations}
                         monthlyFrequencyInputStyle={monthlyFrequencyInputStyle}
+                        monthlyOnDayDropdownStyle={monthlyOnDayDropdownStyle}
+                        monthlyOnTheDayDropdownStyle={monthlyOnTheDayDropdownStyle}
                     />
                 }
                 {
@@ -161,6 +165,8 @@ Repeat.propTypes = {
     repeatDropdownStyle: PropTypes.object,
     weeklyFrequencyInputStyle: PropTypes.object,
     monthlyFrequencyInputStyle: PropTypes.object,
+    monthlyOnDayDropdownStyle: PropTypes.object,
+    monthlyOnTheDayDropdownStyle: PropTypes.object,
 };
 
 export default Repeat;

@@ -16,7 +16,9 @@ const RepeatMonthly = ({
                            },
                            handleChange,
                            translations,
-                           monthlyFrequencyInputStyle
+                           monthlyFrequencyInputStyle,
+                           monthlyOnDayDropdownStyle,
+                           monthlyOnTheDayDropdownStyle
                        }) => {
     const isTheOnlyOneMode = option => options.modes === option;
     const isOptionAvailable = option => !options.modes || isTheOnlyOneMode(option);
@@ -51,6 +53,8 @@ const RepeatMonthly = ({
                     hasMoreModes={!isTheOnlyOneMode('on')}
                     handleChange={handleChange}
                     translations={translations}
+                    monthlyOnDayDropdownStyle={monthlyOnDayDropdownStyle}
+
                 />
             )}
             {isOptionAvailable('on the') && (
@@ -61,6 +65,7 @@ const RepeatMonthly = ({
                     hasMoreModes={!isTheOnlyOneMode('on the')}
                     handleChange={handleChange}
                     translations={translations}
+                    monthlyOnTheDayDropdownStyle={monthlyOnTheDayDropdownStyle}
                 />
             )}
 
@@ -82,6 +87,8 @@ RepeatMonthly.propTypes = {
     handleChange: PropTypes.func.isRequired,
     translations: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
     monthlyFrequencyInputStyle: PropTypes.object,
+    monthlyOnDayDropdownStyle: PropTypes.object,
+    monthlyOnTheDayDropdownStyle: PropTypes.object,
 };
 
 export default RepeatMonthly;

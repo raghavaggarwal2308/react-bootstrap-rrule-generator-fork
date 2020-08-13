@@ -10,9 +10,11 @@ const RepeatMonthlyOn = ({
   on,
   hasMoreModes,
   handleChange,
-  translations
+  translations,
+ monthlyOnDayDropdownStyle
 }) => {
   const isActive = mode === 'on';
+  let selected = on.day;
 
   return (
     <div className={`form-group d-flex align-items-sm-center ${!isActive && 'opacity-50'}`}>
@@ -53,9 +55,13 @@ const RepeatMonthlyOn = ({
             id={`${id}-day`}
             name="repeat.monthly.on.day"
             aria-label="Repeat monthly on a day"
-            key={on.day}
+            key={selected}
             disabled={!isActive}
-            onSelect={eventKey => numericalFieldHandler(handleChange)({target: {name: 'repeat.monthly.on.day', value: eventKey}})}
+            onSelect={eventKey => {
+                selected = eventKey;
+                return numericalFieldHandler(handleChange)({target: {name: 'repeat.monthly.on.day', value: eventKey}})
+            }}
+            style={monthlyOnDayDropdownStyle}
         >
             {/*{[...new Array(31)].map((day, i) => <option key={i} value={i + 1}>{i + 1}</option>)}*/}
             {[...new Array(31)].map((day, i) => <MenuItem eventKey={i+1}>{i + 1}</MenuItem>)}

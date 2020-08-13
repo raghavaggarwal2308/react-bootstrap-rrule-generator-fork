@@ -10,7 +10,8 @@ const RepeatMonthlyOnThe = ({
   onThe,
   hasMoreModes,
   handleChange,
-  translations
+  translations,
+monthlyOnTheDayDropdownStyle
 }) => {
   const isActive = mode === 'on the';
 
