@@ -96,6 +96,8 @@ class ReactRRuleGenerator extends React.Component {
                             handleChange={this.handleChange}
                             translations={this.props.translations}
                             repeatDropdownStyle={this.props.repeatDropdownStyle}
+                            weeklyFrequencyInputStyle={this.props.weeklyFrequencyInputStyle}
+                            monthlyFrequencyInputStyle={this.props.monthlyFrequencyInputStyle}
                         />
                     </div>
 
