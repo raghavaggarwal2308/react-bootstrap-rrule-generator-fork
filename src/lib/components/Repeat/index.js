@@ -20,11 +20,11 @@ const Repeat = ({
                         options,
                     },
                     handleChange,
-                    translations
-                },
-                repeatDropdownStyle,
-                monthlyFrequencyInputStyle,
-                weeklyFrequencyInputStyle) => {
+                    translations,
+                    repeatDropdownStyle,
+                    monthlyFrequencyInputStyle,
+                    weeklyFrequencyInputStyle,
+                }) => {
     const isOptionAvailable = option => !options.frequency || options.frequency.indexOf(option) !== -1;
     const isOptionSelected = option => frequency === option;
 
