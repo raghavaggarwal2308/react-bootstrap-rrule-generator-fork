@@ -27,7 +27,7 @@ const RepeatMonthly = ({
                 <div className="col-sm-1 offset-sm-2">
                     {translateLabel(translations, 'repeat.monthly.every')}
                 </div>
-                <div className="col-sm-3">
+                <div>
                     <input
                         id={`${id}-interval`}
                         name="repeat.monthly.interval"

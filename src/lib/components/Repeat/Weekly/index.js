@@ -26,7 +26,7 @@ const RepeatWeekly = ({
         <div className="col-sm-1 offset-sm-2">
           {translateLabel(translations, 'repeat.weekly.every')}
         </div>
-        <div className="col-sm-3">
+        <div>
           <input
             id={`${id}-interval`}
             name="repeat.weekly.interval"
