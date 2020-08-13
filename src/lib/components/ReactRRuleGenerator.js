@@ -63,6 +63,10 @@ class ReactRRuleGenerator extends React.Component {
             },
         } = this.state;
 
+        console.log('root root root root root root root ');
+        console.log(this.props.repeatDropdownStyle);
+        console.log('root root root root root root root ');
+
         return (
             <div>
                 {
