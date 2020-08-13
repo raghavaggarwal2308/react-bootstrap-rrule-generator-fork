@@ -15,7 +15,7 @@ const RepeatMonthlyOn = ({
   const isActive = mode === 'on';
 
   return (
-    <div className={`form-group row d-flex align-items-sm-center ${!isActive && 'opacity-50'}`}>
+    <div className={`form-group d-flex align-items-sm-center ${!isActive && 'opacity-50'}`}>
       <div className={'combo-label'}>
           <div className="col-sm-1">
               {hasMoreModes && (
@@ -49,6 +49,7 @@ const RepeatMonthlyOn = ({
         {/*</select>*/}
 
         <SplitButton
+            bsStyle={'link'}
             id={`${id}-day`}
             name="repeat.monthly.on.day"
             aria-label="Repeat monthly on a day"
