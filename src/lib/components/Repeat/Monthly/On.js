@@ -53,7 +53,6 @@ const RepeatMonthlyOn = ({
             id={`${id}-day`}
             name="repeat.monthly.on.day"
             aria-label="Repeat monthly on a day"
-            className="form-control"
             key={on.day}
             disabled={!isActive}
             onSelect={eventKey => numericalFieldHandler(handleChange)({target: {name: 'repeat.monthly.on.day', value: eventKey}})}
