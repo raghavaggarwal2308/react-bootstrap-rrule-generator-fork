@@ -29,11 +29,10 @@ monthlyOnTheDayDropdownStyle
                 value="on the"
                 checked={isActive}
                 onChange={handleChange}
-                style={monthlyOnTheDayDropdownStyle}
               />
             )}
           </div>
-          <div className="col-sm-2">
+          <div className="col-sm-8">
             {translateLabel(translations, 'repeat.monthly.on_the')}
           </div>
       </div>

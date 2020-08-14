@@ -32,7 +32,7 @@ const RepeatMonthlyOn = ({
                   />
               )}
           </div>
-          <div className="col-sm-2">
+          <div className="col-sm-8">
               {translateLabel(translations, 'repeat.monthly.on_day')}
           </div>
       </div>
