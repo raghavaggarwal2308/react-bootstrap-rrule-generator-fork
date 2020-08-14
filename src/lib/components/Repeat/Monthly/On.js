@@ -56,6 +56,7 @@ const RepeatMonthlyOn = ({
             name="repeat.monthly.on.day"
             aria-label="Repeat monthly on a day"
             key={selected}
+            title={selected}
             disabled={!isActive}
             onSelect={eventKey => {
                 selected = eventKey;
