@@ -37,7 +37,7 @@ monthlyOnTheDayDropdownStyle
           </div>
       </div>
 
-      <div className="col-sm-2 week-of-month-selector">
+      <div className="week-of-month-selector">
         {/*<select*/}
         {/*  id={`${id}-which`}*/}
         {/*  name="repeat.monthly.onThe.which"*/}
@@ -73,7 +73,7 @@ monthlyOnTheDayDropdownStyle
 
       </div>
 
-      <div className="col-sm-3 day-of-week-selector">
+      <div className="day-of-week-selector">
         {/*<select*/}
         {/*  id={`${id}-day`}*/}
         {/*  name="repeat.monthly.onThe.day"*/}
