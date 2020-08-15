@@ -63,6 +63,7 @@ monthlyOnTheDayDropdownStyle
             title={onThe.which}
             disabled={!isActive}
             style={monthlyOnTheDayDropdownStyle}
+            dropup
         >
               <MenuItem eventKey="First">{translateLabel(translations, 'numerals.first')}</MenuItem>
               <MenuItem eventKey="Second">{translateLabel(translations, 'numerals.second')}</MenuItem>
@@ -95,6 +96,7 @@ monthlyOnTheDayDropdownStyle
               title={onThe.day}
               disabled={!isActive}
               style={monthlyOnTheDayDropdownStyle}
+              dropup
           >
                 {DAYS.map(day => <MenuItem eventKey={day}>{translateLabel(translations, `days.${day.toLowerCase()}`)}</MenuItem>)}
           </SplitButton>

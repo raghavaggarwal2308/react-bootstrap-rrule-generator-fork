@@ -63,6 +63,7 @@ const RepeatMonthlyOn = ({
                 return numericalFieldHandler(handleChange)({target: {name: 'repeat.monthly.on.day', value: eventKey}})
             }}
             style={monthlyOnDayDropdownStyle}
+            dropup
         >
             {/*{[...new Array(31)].map((day, i) => <option key={i} value={i + 1}>{i + 1}</option>)}*/}
             {[...new Array(31)].map((day, i) => <MenuItem eventKey={i+1}>{i + 1}</MenuItem>)}
