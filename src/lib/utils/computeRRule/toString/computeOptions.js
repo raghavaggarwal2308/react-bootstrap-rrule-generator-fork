@@ -1,17 +1,17 @@
 import RRule from 'rrule';
 
-const computeOptions = ({ hideStart, weekStartsOnSunday }) => {
-  const options = {};
+const computeOptions = ({hideStart, weekStartsOnSunday}) => {
+    const options = {};
 
-  if (hideStart) {
-    options.dtstart = null;
-  }
+    if (hideStart) {
+        options.dtstart = null;
+    }
 
-  if (weekStartsOnSunday) {
-    options.wkst = RRule.SU;
-  }
+    if (weekStartsOnSunday) {
+        options.wkst = RRule.SU;
+    }
 
-  return options;
+    return options;
 };
 
 export default computeOptions;

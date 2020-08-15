@@ -14,7 +14,9 @@
     "build-demo": "node scripts/build-demo.js",
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build-demo",
-    "deploy": "gh-pages -d build-demo"
+    "deploy": "gh-pages -d build-demo",
+    "lintjs": "eslint --ignore-pattern node_modules --ignore-pattern dist --ext .js --ext .jsx . --quiet",
+    "fixjs": "eslint --ignore-pattern node_modules --ignore-pattern dist --ext .js --ext .jsx . --quiet --fix"
   },
   "bugs": {
     "url": "https://github.com/Fafruch/react-rrule-generator/issues"
@@ -91,7 +93,6 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
-
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
