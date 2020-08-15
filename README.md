@@ -1,5 +1,8 @@
-# React RRule Generator
-> Recurrence rules generator form built with React
+# React Bootstrap RRule Generator
+> Recurrence rules generator form built with React Bootstrap
+
+> Fork of https://github.com/Fafruch/react-rrule-generator.
+> Content below is from the original repo.
 
 [![LICENSE](https://img.shields.io/npm/l/express.svg)](LICENSE)
 [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://npm-stat.com/charts.html?package=react-rrule-generator)
