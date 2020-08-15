@@ -6,88 +6,56 @@ import RepeatWeekly from './Weekly/index';
 import RepeatDaily from './Daily/index';
 import RepeatHourly from './Hourly/index';
 import translateLabel from '../../utils/translateLabel';
-import {ControlLabel, FormGroup, MenuItem, SplitButton} from "react-bootstrap";
+import {ControlLabel, FormGroup, MenuItem, SplitButton} from 'react-bootstrap';
 
 const Repeat = ({
-                    id,
-                    repeat: {
-                        frequency,
-                        yearly,
-                        monthly,
-                        weekly,
-                        daily,
-                        hourly,
-                        options,
-                    },
-                    handleChange,
-                    translations,
-                    repeatDropdownStyle,
-                    monthlyFrequencyInputStyle,
-                    weeklyFrequencyInputStyle,
-                    monthlyOnDayDropdownStyle,
-                    monthlyOnTheDayDropdownStyle
-                }) => {
-    const isOptionAvailable = option => !options.frequency || options.frequency.indexOf(option) !== -1;
-    const isOptionSelected = option => frequency === option;
+    id,
+    repeat: {
+        frequency,
+        yearly,
+        monthly,
+        weekly,
+        daily,
+        hourly,
+        options,
+    },
+    handleChange,
+    translations,
+    repeatDropdownStyle,
+    monthlyFrequencyInputStyle,
+    weeklyFrequencyInputStyle,
+    monthlyOnDayDropdownStyle,
+    monthlyOnTheDayDropdownStyle,
+}) => {
+    const isOptionAvailable = (option) => !options.frequency || options.frequency.indexOf(option) !== -1;
+    const isOptionSelected = (option) => frequency === option;
 
     return (
-        <div className="px-3">
-            <div className="form-group repeat-frequency">
-                    <ControlLabel>
-                        {translateLabel(translations, 'repeat.label')}
-                    </ControlLabel>
-                    <SplitButton
-                        bsStyle={'link'}
-                        title={frequency}
-                        key={frequency}
-                        id={`dropdown-basic`}
-                        onSelect={eventKey => handleChange({target: {name: 'repeat.frequency', value: eventKey}})}
-                        name={'repeat.frequency'}
-                        style={repeatDropdownStyle}
-                    >
-                        {isOptionAvailable('Yearly') &&
-                        <MenuItem eventKey="Yearly">{translateLabel(translations, 'repeat.yearly.label')}</MenuItem>}
-                        {isOptionAvailable('Monthly') &&
-                        <MenuItem eventKey="Monthly">{translateLabel(translations, 'repeat.monthly.label')}</MenuItem>}
-                        {isOptionAvailable('Weekly') &&
-                        <MenuItem eventKey="Weekly">{translateLabel(translations, 'repeat.weekly.label')}</MenuItem>}
-                        {isOptionAvailable('Daily') &&
-                        <MenuItem eventKey="Daily">{translateLabel(translations, 'repeat.daily.label')}</MenuItem>}
-                        {isOptionAvailable('Hourly') &&
-                        <MenuItem eventKey="Hourly">{translateLabel(translations, 'repeat.hourly.label')}</MenuItem>}
-                    </SplitButton>
-
-
-                {/*<div className="col-sm-2 text-sm-right">*/}
-                {/*    <label*/}
-                {/*        htmlFor={`${id}-frequency`}*/}
-                {/*        className="col-form-label"*/}
-                {/*    >*/}
-                {/*        <strong>*/}
-                {/*            {translateLabel(translations, 'repeat.label')}*/}
-                {/*        </strong>*/}
-                {/*    </label>*/}
-                {/*</div>*/}
-                {/*<div className="col-sm-6">*/}
-                {/*    <select*/}
-                {/*        name="repeat.frequency"*/}
-                {/*        id={`${id}-frequency`}*/}
-                {/*        className="form-control"*/}
-                {/*        value={frequency}*/}
-                {/*        onChange={handleChange}*/}
-                {/*    >*/}
-                {/*        {isOptionAvailable('Yearly') &&*/}
-                {/*        <option value="Yearly">{translateLabel(translations, 'repeat.yearly.label')}</option>}*/}
-                {/*        {isOptionAvailable('Monthly') &&*/}
-                {/*        <option value="Monthly">{translateLabel(translations, 'repeat.monthly.label')}</option>}*/}
-                {/*        {isOptionAvailable('Weekly') &&*/}
-                {/*        <option value="Weekly">{translateLabel(translations, 'repeat.weekly.label')}</option>}*/}
-                {/*        {isOptionAvailable('Daily') &&*/}
-                {/*        <option value="Daily">{translateLabel(translations, 'repeat.daily.label')}</option>}*/}
-                {/*        {isOptionAvailable('Hourly') &&*/}
-                {/*        <option value="Hourly">{translateLabel(translations, 'repeat.hourly.label')}</option>}*/}
-                {/*    </select>*/}
-                {/*</div>*/}
+        <div className='px-3'>
+            <div className='form-group repeat-frequency'>
+                <ControlLabel>
+                    {translateLabel(translations, 'repeat.label')}
+                </ControlLabel>
+                <SplitButton
+                    bsStyle={'link'}
+                    title={frequency}
+                    key={frequency}
+                    id={'dropdown-basic'}
+                    onSelect={(eventKey) => handleChange({target: {name: 'repeat.frequency', value: eventKey}})}
+                    name={'repeat.frequency'}
+                    style={repeatDropdownStyle}
+                >
+                    {isOptionAvailable('Yearly') &&
+                    <MenuItem eventKey='Yearly'>{translateLabel(translations, 'repeat.yearly.label')}</MenuItem>}
+                    {isOptionAvailable('Monthly') &&
+                    <MenuItem eventKey='Monthly'>{translateLabel(translations, 'repeat.monthly.label')}</MenuItem>}
+                    {isOptionAvailable('Weekly') &&
+                    <MenuItem eventKey='Weekly'>{translateLabel(translations, 'repeat.weekly.label')}</MenuItem>}
+                    {isOptionAvailable('Daily') &&
+                    <MenuItem eventKey='Daily'>{translateLabel(translations, 'repeat.daily.label')}</MenuItem>}
+                    {isOptionAvailable('Hourly') &&
+                    <MenuItem eventKey='Hourly'>{translateLabel(translations, 'repeat.hourly.label')}</MenuItem>}
+                </SplitButton>
             </div>
             <div className={'repeat-configuration'}>
                 {

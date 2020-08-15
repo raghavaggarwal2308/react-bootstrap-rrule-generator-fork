@@ -6,41 +6,41 @@ import numericalFieldHandler from '../../../utils/numericalFieldHandler';
 import translateLabel from '../../../utils/translateLabel';
 
 const RepeatMonthly = ({
-                           id,
-                           monthly: {
-                               mode,
-                               interval,
-                               on,
-                               onThe,
-                               options,
-                           },
-                           handleChange,
-                           translations,
-                           monthlyFrequencyInputStyle,
-                           monthlyOnDayDropdownStyle,
-                           monthlyOnTheDayDropdownStyle
-                       }) => {
-    const isTheOnlyOneMode = option => options.modes === option;
-    const isOptionAvailable = option => !options.modes || isTheOnlyOneMode(option);
+    id,
+    monthly: {
+        mode,
+        interval,
+        on,
+        onThe,
+        options,
+    },
+    handleChange,
+    translations,
+    monthlyFrequencyInputStyle,
+    monthlyOnDayDropdownStyle,
+    monthlyOnTheDayDropdownStyle,
+}) => {
+    const isTheOnlyOneMode = (option) => options.modes === option;
+    const isOptionAvailable = (option) => !options.modes || isTheOnlyOneMode(option);
 
     return (
         <div>
-            <div className="form-group d-flex align-items-sm-center">
-                <div className="col-sm-1 offset-sm-2">
+            <div className='form-group d-flex align-items-sm-center'>
+                <div className='col-sm-1 offset-sm-2'>
                     {translateLabel(translations, 'repeat.monthly.every')}
                 </div>
                 <div>
                     <input
                         id={`${id}-interval`}
-                        name="repeat.monthly.interval"
-                        aria-label="Repeat monthly interval"
-                        className="form-control"
+                        name='repeat.monthly.interval'
+                        aria-label='Repeat monthly interval'
+                        className='form-control'
                         value={interval}
                         onChange={numericalFieldHandler(handleChange)}
                         style={monthlyFrequencyInputStyle}
                     />
                 </div>
-                <div className="col-sm-1">
+                <div className='col-sm-1'>
                     {translateLabel(translations, 'repeat.monthly.months')}
                 </div>
             </div>

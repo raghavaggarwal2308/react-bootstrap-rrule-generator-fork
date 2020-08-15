@@ -21,7 +21,7 @@ class ReactRRuleGenerator extends React.Component {
     );
 
     componentWillMount() {
-        console.log("unmounting");
+        console.log('unmounting');
         if (this.props.onChange === ReactRRuleGenerator.defaultProps.onChange) {
             // no onChange() was provided
             throw new Error('No onChange() function has been passed to RRuleGenerator. \n' +
@@ -71,13 +71,13 @@ class ReactRRuleGenerator extends React.Component {
             <div>
                 {
                     !options.hideError && error && (
-                        <div className="alert alert-danger">
+                        <div className='alert alert-danger'>
                             {translateLabel(this.props.translations, 'invalid_rrule', {value: error.value})}
                         </div>
                     )
                 }
 
-                <div className="px-0 pt-3 border rounded">
+                <div className='px-0 pt-3 border rounded'>
 
                     {
                         !options.hideStart && (
