@@ -48,6 +48,7 @@ const RepeatMonthlyOnThe = ({
                     disabled={!isActive}
                     style={monthlyOnTheDayDropdownStyle}
                     dropup={true}
+                    onSelect={(eventKey) => handleChange({target: {name: 'repeat.monthly.onThe.which', value: eventKey}})}
                 >
                     <MenuItem eventKey='First'>{translateLabel(translations, 'numerals.first')}</MenuItem>
                     <MenuItem eventKey='Second'>{translateLabel(translations, 'numerals.second')}</MenuItem>
@@ -69,6 +70,7 @@ const RepeatMonthlyOnThe = ({
                     disabled={!isActive}
                     style={monthlyOnTheDayDropdownStyle}
                     dropup={true}
+                    onSelect={(eventKey) => handleChange({target: {name: 'repeat.monthly.onThe.day', value: eventKey}})}
                 >
                     {DAYS.map((day) => <MenuItem eventKey={day}>{translateLabel(translations, `days.${day.toLowerCase()}`)}</MenuItem>)}
                 </SplitButton>
